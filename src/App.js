@@ -1,4 +1,3 @@
-import propTypes from 'prop-types';
 import React from 'react';
 
 class App extends React.Component {
@@ -7,11 +6,18 @@ class App extends React.Component {
   };
   add = () => {
     this.setState(current => ({count: current.count + 1}))
-  }
+  };
   minus = () => {
     this.setState(current => ({count: current.count -1}))
   }
+  // componentDidMount() {
+  //   console.error.log("component rendered")
+  // }
+  // componentDidUpdate() {
+  //   console.log("I'm just updating")
+  // }
   render() {
+    console.log("render")
     return (
       <div>
           <h1>The number is: {this.state.count}</h1>
